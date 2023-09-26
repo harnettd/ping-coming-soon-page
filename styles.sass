@@ -13,6 +13,20 @@ $semibold: 600
 $bold: 700
   
 
+// Colors
+
+// Primary
+$blue: hsl(223 87% 63%)
+
+// Secondary
+$pale-blue: hsl(223 100% 88%)
+$light-red: hsl(354 100% 66%)
+
+// Neutral
+$gray: hsl(0 0% 59%)
+$very-dark-blue: hsl(209 33% 12%)
+
+
 // CSS Reset
 * > *
   box-sizing: border-box
@@ -23,6 +37,7 @@ $bold: 700
 
 body
   margin: 16.8rem 2rem
+  background-color: white
 
   @media screen and (min-width: $breakpoint)
     margin-top: 8.6rem
@@ -35,19 +50,18 @@ p
 
 // Layout
 
+%center
+  margin-left: auto
+  margin-right: auto 
+
 #main,
 #footer
-  margin-left: auto
-  margin-right: auto
+  @extend %center
   min-width: 37.5rem
   max-width: 64rem
 
 
 // Blocks
-
-%center
-  margin-left: auto
-  margin-right: auto 
 
 .logo-img
   display: block
@@ -65,6 +79,7 @@ p
   text-align: center
   font-size: 4.4rem
   font-weight: $light
+  color: $gray
 
   @media screen and (min-width: $breakpoint)
     margin-bottom: 1.6rem
@@ -73,25 +88,18 @@ p
   
   &--emph
     font-weight: $bold
+    color: $very-dark-blue
 
 .copy
   margin-bottom: 6.5rem
   text-align: center
   font-size: 2.41rem
   font-weight: $light
+  color: $very-dark-blue
 
   @media screen and (min-width: $breakpoint)
     margin-bottom: 4.1rem
     font-size: 2rem
-
-.illustration-img
-  display: block
-  margin-bottom: 24.2rem
-  width: 100%
-  height: auto
-
-  @media screen and (min-width: $breakpoint)
-    margin-bottom: 7.2rem
 
 .flex-signup-form
   display: flex
@@ -114,11 +122,12 @@ p
     padding-bottom: 2.5rem
     padding-left: 6.5rem
     width: 100%
-    border: 0.1rem solid black
+    border: 0.2rem solid $pale-blue
     border-radius: 4rem
     font-family: $font-stack
     font-size: 2.3rem
     font-weight: $light
+    color: $gray
     letter-spacing: 0.06rem
 
     @media screen and (min-width: $breakpoint)
@@ -140,13 +149,22 @@ p
     font-size: 2.4rem
     font-weight: $semibold
     color: white
-    background-color: blue
+    background-color: $blue
     
     @media screen and (min-width: $breakpoint)
       padding-top: 1.8rem
       padding-bottom: 1.8rem
       max-width: 20rem
       font-size: 1.6rem
+
+.illustration-img
+  display: block
+  margin-bottom: 24.2rem
+  width: 100%
+  height: auto
+
+  @media screen and (min-width: $breakpoint)
+    margin-bottom: 7.2rem
 
 .flex-socials-list
   display: flex
@@ -167,7 +185,7 @@ p
     margin-bottom: 1rem
     width: 6rem
     height: 6rem
-    border: 0.1rem solid black
+    border: 0.1rem solid $pale-blue
     border-radius: 50%
 
     @media screen and (min-width: $breakpoint)
@@ -176,6 +194,7 @@ p
 
   &__icon
     font-size: 3rem
+    color: $blue
 
     @media screen and (min-width: $breakpoint)
       font-size: 1.4rem
@@ -184,6 +203,7 @@ p
   text-align: center
   font-size: 2rem
   font-weight: $light
+  color: $gray
 
   @media screen and (min-width: $breakpoint)
     font-size: 1.2rem
