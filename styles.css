@@ -4,11 +4,17 @@ html {
 
 * > * {
   box-sizing: border-box;
-  margin-bottom: 0;
+  margin-top: 0;
 }
 
 body {
   margin: 16.8rem 2rem;
+}
+@media screen and (min-width: 992px) {
+  body {
+    margin-top: 8.6rem;
+    margin-bottom: 8.6rem;
+  }
 }
 
 h1,
@@ -31,28 +37,57 @@ p {
 
 .logo-img {
   display: block;
-  margin-bottom: 8rem;
+  margin-bottom: 7.8rem;
   width: 10.8rem;
   height: auto;
+}
+@media screen and (min-width: 992px) {
+  .logo-img {
+    margin-bottom: 4.8rem;
+    width: 8.6rem;
+  }
 }
 
 .headline {
   margin-bottom: 3.5rem;
   text-align: center;
-  font-size: 4.3rem;
+  font-size: 4.4rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 992px) {
+  .headline {
+    margin-bottom: 1.6rem;
+    font-size: 4.73rem;
+    letter-spacing: 0.05rem;
+  }
+}
+.headline--emph {
+  font-weight: 700;
 }
 
 .copy {
   margin-bottom: 6.5rem;
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.41rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 992px) {
+  .copy {
+    margin-bottom: 4.1rem;
+    font-size: 2rem;
+  }
 }
 
 .illustration-img {
   display: block;
-  margin-bottom: 24rem;
+  margin-bottom: 24.2rem;
   width: 100%;
   height: auto;
+}
+@media screen and (min-width: 992px) {
+  .illustration-img {
+    margin-bottom: 7.2rem;
+  }
 }
 
 .flex-signup-form {
@@ -60,46 +95,59 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 14rem;
+  margin-bottom: 13.6rem;
   max-width: 56rem;
 }
 @media screen and (min-width: 992px) {
   .flex-signup-form {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-bottom: 8.6rem;
+    max-width: none;
   }
 }
 .flex-signup-form__email-input {
   margin-bottom: 2.1rem;
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
-  padding-left: 6.3rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 6.5rem;
   width: 100%;
   border: 0.1rem solid black;
   border-radius: 4rem;
   font-family: "Libre Franklin", sans-serif;
   font-size: 2.3rem;
-  letter-spacing: 0.09rem;
+  font-weight: 300;
+  letter-spacing: 0.06rem;
 }
 @media screen and (min-width: 992px) {
   .flex-signup-form__email-input {
-    max-width: 42rem;
+    margin-bottom: 0;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+    padding-left: 3.2rem;
+    max-width: 42.2rem;
+    font-size: 1.6rem;
+    letter-spacing: 0;
   }
 }
 .flex-signup-form__submit-btn {
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   width: 100%;
   border: none;
   border-radius: 4rem;
   font-family: "Libre Franklin", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
+  font-weight: 600;
   color: white;
   background-color: blue;
 }
 @media screen and (min-width: 992px) {
   .flex-signup-form__submit-btn {
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
     max-width: 20rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -109,7 +157,13 @@ p {
   justify-content: center;
   align-items: center;
   gap: 2.7rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 4.6rem;
+}
+@media screen and (min-width: 992px) {
+  .flex-socials-list {
+    gap: 1.3rem;
+    margin-bottom: 1.6rem;
+  }
 }
 .flex-socials-list__icon-wrapper {
   display: flex;
@@ -121,13 +175,30 @@ p {
   border: 0.1rem solid black;
   border-radius: 50%;
 }
+@media screen and (min-width: 992px) {
+  .flex-socials-list__icon-wrapper {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 .flex-socials-list__icon {
   font-size: 3rem;
+}
+@media screen and (min-width: 992px) {
+  .flex-socials-list__icon {
+    font-size: 1.4rem;
+  }
 }
 
 .copyright {
   text-align: center;
   font-size: 2rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 992px) {
+  .copyright {
+    font-size: 1.2rem;
+  }
 }
 
 .attribution {
@@ -144,6 +215,12 @@ body {
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 75rem auto;
+}
+@media screen and (min-width: 992px) {
+  body {
+    background-image: url("./design/desktop-design.jpg");
+    background-size: 144rem auto;
+  }
 }
 
 #main,

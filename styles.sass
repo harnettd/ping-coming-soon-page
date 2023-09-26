@@ -5,11 +5,18 @@ html
 // Breakpoint
 $breakpoint: 992px
 
+
+// Fonts
+$font-stack: 'Libre Franklin', sans-serif
+$light: 300
+$semibold: 600
+$bold: 700
   
+
 // CSS Reset
 * > *
   box-sizing: border-box
-  margin-bottom: 0
+  margin-top: 0
   
   
 // Base
@@ -17,7 +24,9 @@ $breakpoint: 992px
 body
   margin: 16.8rem 2rem
 
-$font-stack: 'Libre Franklin', sans-serif
+  @media screen and (min-width: $breakpoint)
+    margin-top: 8.6rem
+    margin-bottom: 8.6rem
 
 h1,
 p
@@ -42,26 +51,47 @@ p
 
 .logo-img
   display: block
-  margin-bottom: 8rem
+  margin-bottom: 7.8rem
   @extend %center 
   width: 10.8rem
   height: auto
 
+  @media screen and (min-width: $breakpoint)
+    margin-bottom: 4.8rem
+    width: 8.6rem
+
 .headline
   margin-bottom: 3.5rem
   text-align: center
-  font-size: 4.3rem
+  font-size: 4.4rem
+  font-weight: $light
+
+  @media screen and (min-width: $breakpoint)
+    margin-bottom: 1.6rem
+    font-size: 4.73rem
+    letter-spacing: 0.05rem
   
+  &--emph
+    font-weight: $bold
+
 .copy
   margin-bottom: 6.5rem
   text-align: center
-  font-size: 2.4rem
+  font-size: 2.41rem
+  font-weight: $light
+
+  @media screen and (min-width: $breakpoint)
+    margin-bottom: 4.1rem
+    font-size: 2rem
 
 .illustration-img
   display: block
-  margin-bottom: 24rem
+  margin-bottom: 24.2rem
   width: 100%
   height: auto
+
+  @media screen and (min-width: $breakpoint)
+    margin-bottom: 7.2rem
 
 .flex-signup-form
   display: flex
@@ -69,41 +99,54 @@ p
   justify-content: flex-start
   align-items: center
   @extend %center
-  margin-bottom: 14rem
+  margin-bottom: 13.6rem
   max-width: 56rem
   
   @media screen and (min-width: $breakpoint)
     flex-direction: row
-    justify-content: space-around
+    justify-content: space-between
+    margin-bottom: 8.6rem
+    max-width: none 
   
   &__email-input
     margin-bottom: 2.1rem
-    padding-top: 2.4rem
-    padding-bottom: 2.4rem
-    padding-left: 6.3rem
+    padding-top: 2.5rem
+    padding-bottom: 2.5rem
+    padding-left: 6.5rem
     width: 100%
     border: 0.1rem solid black
     border-radius: 4rem
     font-family: $font-stack
     font-size: 2.3rem
-    letter-spacing: 0.09rem
+    font-weight: $light
+    letter-spacing: 0.06rem
 
     @media screen and (min-width: $breakpoint)
-      max-width: 42rem
+      margin-bottom: 0
+      padding-top: 1.8rem
+      padding-bottom: 1.8rem
+      padding-left: 3.2rem
+      max-width: 42.2rem
+      font-size: 1.6rem
+      letter-spacing: 0
     
   &__submit-btn
-    padding-top: 2.4rem
-    padding-bottom: 2.4rem
+    padding-top: 2.5rem
+    padding-bottom: 2.5rem
     width: 100%
     border: none
     border-radius: 4rem
     font-family: $font-stack
-    font-size: 2.5rem
+    font-size: 2.4rem
+    font-weight: $semibold
     color: white
     background-color: blue
     
     @media screen and (min-width: $breakpoint)
+      padding-top: 1.8rem
+      padding-bottom: 1.8rem
       max-width: 20rem
+      font-size: 1.6rem
 
 .flex-socials-list
   display: flex
@@ -111,7 +154,11 @@ p
   justify-content: center
   align-items: center
   gap: 2.7rem
-  margin-bottom: 4.5rem
+  margin-bottom: 4.6rem
+
+  @media screen and (min-width: $breakpoint)
+    gap: 1.3rem
+    margin-bottom: 1.6rem
 
   &__icon-wrapper
     display: flex
@@ -123,12 +170,23 @@ p
     border: 0.1rem solid black
     border-radius: 50%
 
+    @media screen and (min-width: $breakpoint)
+      width: 3rem
+      height: 3rem
+
   &__icon
-    font-size: 3rem  
+    font-size: 3rem
+
+    @media screen and (min-width: $breakpoint)
+      font-size: 1.4rem
   
 .copyright
   text-align: center
   font-size: 2rem
+  font-weight: $light
+
+  @media screen and (min-width: $breakpoint)
+    font-size: 1.2rem
   
 .attribution 
   font-size: 1.1rem
@@ -146,6 +204,11 @@ body
     repeat: no-repeat
     position: left top 
     size: 75rem auto
+
+  @media screen and (min-width: $breakpoint)
+    background:
+      image: url("./design/desktop-design.jpg")
+      size: 144rem auto
 
 #main,
 #footer
