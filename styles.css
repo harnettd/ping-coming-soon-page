@@ -11,7 +11,7 @@ body {
   margin: 16.8rem 2rem;
   background-color: hsl(0, 0%, 100%);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   body {
     margin-top: 8.6rem;
     margin-bottom: 8.6rem;
@@ -41,7 +41,7 @@ p {
   width: 10.8rem;
   height: auto;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .logo-img {
     margin-bottom: 4.8rem;
     width: 8.6rem;
@@ -55,7 +55,7 @@ p {
   font-weight: 300;
   color: hsl(0, 0%, 59%);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .headline {
     margin-bottom: 1.7rem;
     font-size: 4.73rem;
@@ -74,7 +74,7 @@ p {
   font-weight: 300;
   color: hsl(209, 33%, 12%);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .copy {
     margin-bottom: 3.8rem;
     font-size: 2rem;
@@ -89,7 +89,7 @@ p {
   margin-bottom: 13.7rem;
   max-width: 56rem;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .flex-signup-form {
     flex-direction: row;
     justify-content: space-between;
@@ -111,7 +111,10 @@ p {
   color: hsl(0, 0%, 59%);
   letter-spacing: 0.06rem;
 }
-@media screen and (min-width: 992px) {
+.flex-signup-form__email-input--on-err {
+  border-color: hsl(354, 100%, 66%);
+}
+@media screen and (min-width: 1440px) {
   .flex-signup-form__email-input {
     margin-bottom: 0;
     padding-top: 1.8rem;
@@ -134,7 +137,7 @@ p {
   color: hsl(0, 0%, 100%);
   background-color: hsl(223, 87%, 63%);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .flex-signup-form__submit-btn {
     padding-top: 1.9rem;
     padding-bottom: 1.9rem;
@@ -146,6 +149,29 @@ p {
   background-color: hsla(223, 87%, 63%, 0.8);
   cursor: pointer;
 }
+.flex-signup-form__err-msg {
+  display: none;
+  margin-top: -0.7rem;
+  margin-bottom: 4.6rem;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 300;
+  color: hsl(354, 100%, 66%);
+}
+@media screen and (min-width: 1440px) {
+  .flex-signup-form__err-msg {
+    display: block;
+    visibility: hidden;
+  }
+}
+.flex-signup-form__err-msg--on-err {
+  display: block;
+}
+@media screen and (min-width: 1440px) {
+  .flex-signup-form__err-msg--on-err {
+    visibility: visible;
+  }
+}
 
 .illustration-img {
   display: block;
@@ -153,7 +179,7 @@ p {
   width: 100%;
   height: auto;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .illustration-img {
     margin-bottom: 7.2rem;
   }
@@ -167,7 +193,7 @@ p {
   gap: 2.7rem;
   margin-bottom: 4.6rem;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .flex-socials-list {
     gap: 1.3rem;
     margin-bottom: 1.7rem;
@@ -183,7 +209,7 @@ p {
   border: 0.1rem solid hsl(223, 100%, 88%);
   border-radius: 50%;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .flex-socials-list__icon-wrapper {
     width: 3rem;
     height: 3rem;
@@ -198,7 +224,7 @@ p {
   font-size: 3rem;
   color: hsl(223, 87%, 63%);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .flex-socials-list__icon {
     font-size: 1.5rem;
   }
@@ -213,7 +239,7 @@ p {
   font-weight: 300;
   color: hsl(0, 0%, 59%);
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   .copyright {
     font-size: 1.2rem;
   }
@@ -234,7 +260,7 @@ body {
   background-position: left top;
   background-size: 75rem auto;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1440px) {
   body {
     background-image: url("./design/desktop-hover-error-states.jpg");
     background-size: 144rem auto;

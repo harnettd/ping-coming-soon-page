@@ -16,4 +16,12 @@ $(document).ready(() => {
         button.toggleClass("flex-signup-form__submit-btn--hover")
     })
 
+    // Add hover state to the email input
+    $(".flex-signup-form__email-input").hover(function () {
+        const emailInput = $(this)
+        const errroMessage = emailInput.next(".flex-signup-form__err-msg")
+
+        emailInput.toggleClass("flex-signup-form__email-input--on-err")
+        errroMessage.toggleClass("flex-signup-form__err-msg--on-err")
+    })
 })
