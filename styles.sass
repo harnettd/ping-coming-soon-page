@@ -17,6 +17,7 @@ $bold: 700
 
 // Primary
 $blue: hsl(223 87% 63%)
+$blue-hover: hsl(223 87% 63% / 0.8)
 
 // Secondary
 $pale-blue: hsl(223 100% 88%)
@@ -25,6 +26,7 @@ $light-red: hsl(354 100% 66%)
 // Neutral
 $gray: hsl(0 0% 59%)
 $very-dark-blue: hsl(209 33% 12%)
+$white: hsl(0 0% 100%)
 
 
 // CSS Reset
@@ -37,7 +39,7 @@ $very-dark-blue: hsl(209 33% 12%)
 
 body
   margin: 16.8rem 2rem
-  background-color: white
+  background-color: $white
 
   @media screen and (min-width: $breakpoint)
     margin-top: 8.6rem
@@ -148,7 +150,7 @@ p
     font-family: $font-stack
     font-size: 2.4rem
     font-weight: $semibold
-    color: white
+    color: $white
     background-color: $blue
     
     @media screen and (min-width: $breakpoint)
@@ -156,6 +158,10 @@ p
       padding-bottom: 1.9rem
       max-width: 20rem
       font-size: 1.6rem
+
+    &--hover
+      background-color: $blue-hover
+      cursor: pointer 
 
 .illustration-img
   display: block
@@ -192,12 +198,21 @@ p
       width: 3rem
       height: 3rem
 
+    &--hover
+      background-color: $blue
+      border-color: $blue
+
+      cursor: pointer
+
   &__icon
     font-size: 3rem
     color: $blue
 
     @media screen and (min-width: $breakpoint)
       font-size: 1.5rem
+
+    &--hover
+      color: $white
   
 .copyright
   text-align: center
@@ -220,14 +235,14 @@ p
 
 body
   background:
-    image: url("./design/mobile-design.jpg")
+    image: url("./design/mobile-error-state.jpg")
     repeat: no-repeat
     position: left top 
     size: 75rem auto
 
   @media screen and (min-width: $breakpoint)
     background:
-      image: url("./design/desktop-design.jpg")
+      image: url("./design/desktop-hover-error-states.jpg")
       size: 144rem auto
 
 #main,

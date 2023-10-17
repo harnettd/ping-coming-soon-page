@@ -9,7 +9,7 @@ html {
 
 body {
   margin: 16.8rem 2rem;
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
 }
 @media screen and (min-width: 992px) {
   body {
@@ -131,7 +131,7 @@ p {
   font-family: "Libre Franklin", sans-serif;
   font-size: 2.4rem;
   font-weight: 600;
-  color: white;
+  color: hsl(0, 0%, 100%);
   background-color: hsl(223, 87%, 63%);
 }
 @media screen and (min-width: 992px) {
@@ -141,6 +141,10 @@ p {
     max-width: 20rem;
     font-size: 1.6rem;
   }
+}
+.flex-signup-form__submit-btn--hover {
+  background-color: hsla(223, 87%, 63%, 0.8);
+  cursor: pointer;
 }
 
 .illustration-img {
@@ -185,6 +189,11 @@ p {
     height: 3rem;
   }
 }
+.flex-socials-list__icon-wrapper--hover {
+  background-color: hsl(223, 87%, 63%);
+  border-color: hsl(223, 87%, 63%);
+  cursor: pointer;
+}
 .flex-socials-list__icon {
   font-size: 3rem;
   color: hsl(223, 87%, 63%);
@@ -193,6 +202,9 @@ p {
   .flex-socials-list__icon {
     font-size: 1.5rem;
   }
+}
+.flex-socials-list__icon--hover {
+  color: hsl(0, 0%, 100%);
 }
 
 .copyright {
@@ -217,14 +229,14 @@ p {
 }
 
 body {
-  background-image: url("./design/mobile-design.jpg");
+  background-image: url("./design/mobile-error-state.jpg");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 75rem auto;
 }
 @media screen and (min-width: 992px) {
   body {
-    background-image: url("./design/desktop-design.jpg");
+    background-image: url("./design/desktop-hover-error-states.jpg");
     background-size: 144rem auto;
   }
 }
