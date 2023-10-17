@@ -57,7 +57,7 @@ p {
 }
 @media screen and (min-width: 992px) {
   .headline {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.7rem;
     font-size: 4.73rem;
     letter-spacing: 0.05rem;
   }
@@ -76,7 +76,7 @@ p {
 }
 @media screen and (min-width: 992px) {
   .copy {
-    margin-bottom: 4.1rem;
+    margin-bottom: 3.8rem;
     font-size: 2rem;
   }
 }
@@ -86,21 +86,21 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 13.6rem;
+  margin-bottom: 13.7rem;
   max-width: 56rem;
 }
 @media screen and (min-width: 992px) {
   .flex-signup-form {
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 8.6rem;
+    margin-bottom: 8.5rem;
     max-width: none;
   }
 }
 .flex-signup-form__email-input {
   margin-bottom: 2.1rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
   padding-left: 6.5rem;
   width: 100%;
   border: 0.2rem solid hsl(223, 100%, 88%);
@@ -136,8 +136,8 @@ p {
 }
 @media screen and (min-width: 992px) {
   .flex-signup-form__submit-btn {
-    padding-top: 1.8rem;
-    padding-bottom: 1.8rem;
+    padding-top: 1.9rem;
+    padding-bottom: 1.9rem;
     max-width: 20rem;
     font-size: 1.6rem;
   }
@@ -145,7 +145,7 @@ p {
 
 .illustration-img {
   display: block;
-  margin-bottom: 24.2rem;
+  margin-bottom: 24.1rem;
   width: 100%;
   height: auto;
 }
@@ -166,7 +166,7 @@ p {
 @media screen and (min-width: 992px) {
   .flex-socials-list {
     gap: 1.3rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.7rem;
   }
 }
 .flex-socials-list__icon-wrapper {
@@ -191,7 +191,7 @@ p {
 }
 @media screen and (min-width: 992px) {
   .flex-socials-list__icon {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 
