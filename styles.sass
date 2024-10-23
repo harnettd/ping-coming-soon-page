@@ -3,8 +3,9 @@ html
 
   
 // Breakpoint
-// $breakpoint: 992px
-$breakpoint: 1440px
+$x-small: 576ps
+$breakpoint: 992px
+// $breakpoint: 1440px
 
 
 // Fonts
@@ -31,7 +32,7 @@ $white: hsl(0 0% 100%)
 
 
 // CSS Reset
-* > *
+*>*
   box-sizing: border-box
   margin-top: 0
   
@@ -39,12 +40,8 @@ $white: hsl(0 0% 100%)
 // Base
 
 body
-  margin: 16.8rem 2rem
+  margin: 0
   background-color: $white
-
-  @media screen and (min-width: $breakpoint)
-    margin-top: 8.6rem
-    margin-bottom: 8.6rem
 
 h1,
 p
@@ -53,15 +50,16 @@ p
 
 // Layout
 
-%center
-  margin-left: auto
-  margin-right: auto 
-
 #main,
 #footer
-  @extend %center
-  min-width: 37.5rem
-  max-width: 64rem
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+
+  margin: 0 auto
+  min-width: 57.6rem
+  max-width: 75rem
 
 
 // Blocks
@@ -69,7 +67,6 @@ p
 .logo-img
   display: block
   margin-bottom: 7.8rem
-  @extend %center 
   width: 10.8rem
   height: auto
 
@@ -109,21 +106,25 @@ p
   flex-direction: column
   justify-content: flex-start
   align-items: center
-  @extend %center
+  gap: 1rem
+  
   margin-bottom: 13.7rem
-  max-width: 56rem
+  width: 75%
   
   @media screen and (min-width: $breakpoint)
     flex-direction: row
-    justify-content: space-between
+    // justify-content: space-between
+    align-items: flex-start
     margin-bottom: 8.5rem
-    max-width: none 
+    max-width: 56rem
+
+  &__email-container
+    width: 100%
   
   &__email-input
+    display: block
     margin-bottom: 2.1rem
-    padding-top: 2.4rem
-    padding-bottom: 2.4rem
-    padding-left: 6.5rem
+    padding: 2.4rem 0 2.4rem 6.5rem
     width: 100%
     border: 0.2rem solid $pale-blue
     border-radius: 4rem
@@ -135,6 +136,27 @@ p
 
     &--on-err
       border-color: $light-red
+
+  &__err-msg
+    display: none
+    margin-top: -.7rem
+    margin-bottom: 4.6rem
+    text-align: center
+    font-size: 2rem
+    font-style: italic
+    font-weight: $light
+    color: $light-red
+
+    @media screen and (min-width: $breakpoint)
+      display: block
+      text-align: left
+      visibility: hidden
+
+    &--on-err
+      display: block
+
+      @media screen and (min-width: $breakpoint)
+        visibility: visible
 
     @media screen and (min-width: $breakpoint)
       margin-bottom: 0
@@ -163,29 +185,9 @@ p
       max-width: 20rem
       font-size: 1.6rem
 
-    &--hover
-      background-color: $blue-hover
-      cursor: pointer
-
-  &__err-msg
-    display: none
-    margin-top: -.7rem
-    margin-bottom: 4.6rem
-    font-size: 2rem
-    font-style: italic
-    font-weight: $light
-    color: $light-red
-
-    @media screen and (min-width: $breakpoint)
-      display: block
-      visibility: hidden
-
-    &--on-err
-      display: block
-
-      @media screen and (min-width: $breakpoint)
-        visibility: visible
-
+  &__submit-btn:hover
+    background-color: $blue-hover
+    cursor: pointer
 
 .illustration-img
   display: block
@@ -258,17 +260,18 @@ p
 // Development redefinition level
 
 body
-  background:
-    image: url("./design/mobile-error-state.jpg")
-    repeat: no-repeat
-    position: left top 
-    size: 75rem auto
+  margin-top: 10rem
+//   background:
+//     image: url("./design/mobile-error-state.jpg")
+//     repeat: no-repeat
+//     position: left top 
+//     size: 75rem auto
 
-  @media screen and (min-width: $breakpoint)
-    background:
-      image: url("./design/desktop-hover-error-states.jpg")
-      size: 144rem auto
+//   @media screen and (min-width: $breakpoint)
+//     background:
+//       image: url("./design/desktop-hover-error-states.jpg")
+//       size: 144rem auto
 
-#main,
-#footer
-  opacity: 0.5
+// #main,
+// #footer
+//   opacity: 0.5

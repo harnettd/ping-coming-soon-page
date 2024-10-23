@@ -1,63 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
 
-<head>
-  <meta charset="utf-8">
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- displays site properly based on user's device -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Ping coming soon page</title>
 
-  <title>Frontend Mentor | Ping coming soon page</title>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,600;1,700&display=swap"
-    rel="stylesheet">
+    <!-- Local stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
 
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Local stylesheet -->
-  <link rel="stylesheet" href="./styles.css">
-</head>
 
-<body>
-  <main id="main">
-    <img class="logo-img" src="./images/logo.svg" alt="Ping logo" width="81" height="26">
-    <h1 class="headline">
-      We are launching <span class="headline headline--emph">soon!</span>
-    </h1>
-    <p class="copy">Subscribe and get notified</p>
-    <form class="flex-signup-form">
-      <input class="flex-signup-form__email-input" type="email"
-        placeholder="Your email address...">
-        <p class="flex-signup-form__err-msg">Please provide a valid email address</p>
-      <button class="flex-signup-form__submit-btn" type="submit">Notify Me</button>
-    </form>
-    <img class="illustration-img" src="./images/illustration-dashboard.png" alt="A figure depicting four plots"
-      width="1280" height="782">
-  </main>
+  </head>
 
-  <footer id="footer">
-    <div class="flex-socials-list">
-      <div class="flex-socials-list__icon-wrapper">
-        <span class="flex-socials-list__icon fa-brands fa-facebook-f"></span>
+  <body>
+    <main id="main">
+      <img
+        class="logo-img"
+        src="./images/logo.svg"
+        alt="Ping logo"
+        width="81"
+        height="26"
+      />
+      <h1 class="headline">
+        We are launching <span class="headline headline--emph">soon!</span>
+      </h1>
+      <p class="copy">Subscribe and get notified</p>
+      <form class="flex-signup-form">
+        <div class="flex-signup-form__email-container">
+          <input
+            class="flex-signup-form__email-input"
+            type="email"
+            placeholder="Your email address..."
+          />
+          <p class="flex-signup-form__err-msg">
+            Please provide a valid email address
+          </p>
+        </div>
+        <button class="flex-signup-form__submit-btn" type="submit">
+          Notify Me
+        </button>
+      </form>
+      <img
+        class="illustration-img"
+        src="./images/illustration-dashboard.png"
+        alt="A figure depicting four plots"
+        width="1280"
+        height="782"
+      />
+    </main>
+
+    <footer id="footer">
+      <div class="flex-socials-list">
+        <div class="flex-socials-list__icon-wrapper">
+          <span class="flex-socials-list__icon fa-brands fa-facebook-f"></span>
+        </div>
+        <div class="flex-socials-list__icon-wrapper">
+          <span class="flex-socials-list__icon fa-brands fa-twitter"></span>
+        </div>
+        <div class="flex-socials-list__icon-wrapper">
+          <span class="flex-socials-list__icon fa-brands fa-instagram"></span>
+        </div>
       </div>
-      <div class="flex-socials-list__icon-wrapper">
-        <span class="flex-socials-list__icon fa-brands fa-twitter"></span>
-      </div>
-      <div class="flex-socials-list__icon-wrapper">
-        <span class="flex-socials-list__icon fa-brands fa-instagram"></span>
-      </div>
-    </div>
-    <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
-  </footer>
+      <p class="copyright">&copy; Copyright Ping. All rights reserved.</p>
+    </footer>
 
-  <!--
+    <!--
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -66,8 +97,10 @@
   </footer>
  -->
 
-  <script src="https://kit.fontawesome.com/c4fe6d7134.js" crossorigin="anonymous"></script>
-  <script src="./index.js"></script>
-</body>
-
+    <script
+      src="https://kit.fontawesome.com/c4fe6d7134.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
 </html>
