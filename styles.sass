@@ -1,19 +1,16 @@
 html
   font-size: 62.5%
 
-  
 // Breakpoint
 $x-small: 576ps
 $breakpoint: 992px
 // $breakpoint: 1440px
-
 
 // Fonts
 $font-stack: 'Libre Franklin', sans-serif
 $light: 300
 $semibold: 600
 $bold: 700
-  
 
 // Colors
 
@@ -30,13 +27,11 @@ $gray: hsl(0 0% 59%)
 $very-dark-blue: hsl(209 33% 12%)
 $white: hsl(0 0% 100%)
 
-
 // CSS Reset
 *>*
   box-sizing: border-box
   margin-top: 0
-  
-  
+
 // Base
 
 body
@@ -46,7 +41,6 @@ body
 h1,
 p
   font-family: $font-stack
-
 
 // Layout
 
@@ -60,7 +54,6 @@ p
   margin: 0 auto
   min-width: 57.6rem
   max-width: 75rem
-
 
 // Blocks
 
@@ -85,7 +78,7 @@ p
     margin-bottom: 1.7rem
     font-size: 4.73rem
     letter-spacing: 0.05rem
-  
+
   &--emph
     font-weight: $bold
     color: $very-dark-blue
@@ -107,10 +100,10 @@ p
   justify-content: flex-start
   align-items: center
   gap: 1rem
-  
+
   margin-bottom: 13.7rem
   width: 75%
-  
+
   @media screen and (min-width: $breakpoint)
     flex-direction: row
     // justify-content: space-between
@@ -120,7 +113,7 @@ p
 
   &__email-container
     width: 100%
-  
+
   &__email-input
     display: block
     margin-bottom: 2.1rem
@@ -166,7 +159,7 @@ p
       max-width: 42.2rem
       font-size: 1.6rem
       letter-spacing: 0
-    
+
   &__submit-btn
     padding-top: 2.5rem
     padding-bottom: 2.5rem
@@ -178,7 +171,7 @@ p
     font-weight: $semibold
     color: $white
     background-color: $blue
-    
+
     @media screen and (min-width: $breakpoint)
       padding-top: 1.9rem
       padding-bottom: 1.9rem
@@ -224,7 +217,7 @@ p
       width: 3rem
       height: 3rem
 
-    &--hover
+    &:hover
       background-color: $blue
       border-color: $blue
 
@@ -237,9 +230,9 @@ p
     @media screen and (min-width: $breakpoint)
       font-size: 1.5rem
 
-    &--hover
-      color: $white
-  
+  &__icon-wrapper:hover > &__icon
+    color: $white
+
 .copyright
   text-align: center
   font-size: 2rem
@@ -248,14 +241,13 @@ p
 
   @media screen and (min-width: $breakpoint)
     font-size: 1.2rem
-  
-.attribution 
+
+.attribution
   font-size: 1.1rem
   text-align: center
 
-.attribution a 
+.attribution a
   color: hsl(228 45% 44%)
-
 
 // Development redefinition level
 

@@ -213,7 +213,7 @@ p {
     height: 3rem;
   }
 }
-.flex-socials-list__icon-wrapper--hover {
+.flex-socials-list__icon-wrapper:hover {
   background-color: hsl(223, 87%, 63%);
   border-color: hsl(223, 87%, 63%);
   cursor: pointer;
@@ -227,7 +227,7 @@ p {
     font-size: 1.5rem;
   }
 }
-.flex-socials-list__icon--hover {
+.flex-socials-list__icon-wrapper:hover > .flex-socials-list__icon {
   color: hsl(0, 0%, 100%);
 }
 

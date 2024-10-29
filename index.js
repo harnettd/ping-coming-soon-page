@@ -33,12 +33,3 @@ $(".flex-signup-form__submit-btn").click((evt) => {
     console.log("Valid email address");
   }
 });
-
-// Add hover states to the social media icons
-$(".flex-socials-list__icon-wrapper").hover(function () {
-  const iconWrapper = $(this);
-  const icon = iconWrapper.children(".flex-socials-list__icon");
-
-  iconWrapper.toggleClass("flex-socials-list__icon-wrapper--hover");
-  icon.toggleClass("flex-socials-list__icon--hover");
-});
