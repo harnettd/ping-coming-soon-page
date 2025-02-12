@@ -1,3 +1,8 @@
+.flex-signup-form__submit-btn:focus-visible, .flex-signup-form__submit-btn:hover {
+  background-color: hsla(223, 87%, 63%, 0.8);
+  cursor: pointer;
+}
+
 .flex-signup-form {
   display: flex;
   flex-direction: column;
@@ -33,6 +38,9 @@
 }
 .flex-signup-form__email-input--on-err {
   border-color: hsl(354, 100%, 66%);
+}
+.flex-signup-form__email-input:focus-visible {
+  border-color: hsl(223, 87%, 63%);
 }
 .flex-signup-form__err-msg {
   display: none;
@@ -90,9 +98,8 @@
     font-size: 1.6rem;
   }
 }
-.flex-signup-form__submit-btn:hover {
-  background-color: hsla(223, 87%, 63%, 0.8);
-  cursor: pointer;
+.flex-signup-form *:focus-visible {
+  outline: none;
 }
 
 .flex-socials-list {

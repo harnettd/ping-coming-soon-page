@@ -1,5 +1,9 @@
 @use 'vars' as *
 
+%btn-active
+    background-color: $blue-hover
+    cursor: pointer
+
 .flex-signup-form
   display: flex
   flex-direction: column
@@ -35,6 +39,9 @@
 
     &--on-err
       border-color: $light-red
+
+    &:focus-visible
+        border-color: $blue  
 
   &__err-msg
     display: none
@@ -85,5 +92,10 @@
       font-size: 1.6rem
 
   &__submit-btn:hover
-    background-color: $blue-hover
-    cursor: pointer
+    @extend %btn-active
+
+  &__submit-btn:focus-visible
+    @extend %btn-active
+
+.flex-signup-form *:focus-visible
+    outline: none
