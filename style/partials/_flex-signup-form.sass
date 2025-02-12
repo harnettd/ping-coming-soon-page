@@ -1,0 +1,89 @@
+@use 'vars' as *
+
+.flex-signup-form
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  gap: 1rem
+
+  margin-bottom: 13.7rem
+  width: 75%
+
+  @media screen and (min-width: $breakpoint)
+    flex-direction: row
+    // justify-content: space-between
+    align-items: flex-start
+    margin-bottom: 8.5rem
+    max-width: 56rem
+
+  &__email-container
+    width: 100%
+
+  &__email-input
+    display: block
+    margin-bottom: 2.1rem
+    padding: 2.4rem 0 2.4rem 6.5rem
+    width: 100%
+    border: 0.2rem solid $pale-blue
+    border-radius: 4rem
+    font-family: $font-stack
+    font-size: 2.3rem
+    font-weight: $light
+    color: $gray
+    letter-spacing: 0.06rem
+
+    &--on-err
+      border-color: $light-red
+
+  &__err-msg
+    display: none
+    margin-top: -.7rem
+    margin-bottom: 4.6rem
+    text-align: center
+    font-size: 2rem
+    font-style: italic
+    font-weight: $light
+    color: $light-red
+
+    @media screen and (min-width: $breakpoint)
+      display: block
+      text-align: left
+      visibility: hidden
+
+    &--on-err
+      display: block
+
+      @media screen and (min-width: $breakpoint)
+        visibility: visible
+
+    @media screen and (min-width: $breakpoint)
+      margin-bottom: 0
+      padding-top: 1.8rem
+      padding-bottom: 1.8rem
+      padding-left: 3.2rem
+      max-width: 42.2rem
+      font-size: 1.6rem
+      letter-spacing: 0
+
+  &__submit-btn
+    padding-top: 2.5rem
+    padding-bottom: 2.5rem
+    width: 100%
+    border: none
+    border-radius: 4rem
+    font-family: $font-stack
+    font-size: 2.4rem
+    font-weight: $semibold
+    color: $white
+    background-color: $blue
+
+    @media screen and (min-width: $breakpoint)
+      padding-top: 1.9rem
+      padding-bottom: 1.9rem
+      max-width: 20rem
+      font-size: 1.6rem
+
+  &__submit-btn:hover
+    background-color: $blue-hover
+    cursor: pointer
