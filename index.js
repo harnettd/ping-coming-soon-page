@@ -1,13 +1,42 @@
-const formBlock = "flex-signup-form";
-const emailInput = document.querySelector(`.${formBlock}__email-input`);
-const errMsg = document.querySelector(`.${formBlock}__err-msg`);
-const submitBtn = document.querySelector(`.${formBlock}__submit-btn`);
+// Return a class name in the BEM convention.
+const BEM = (block, element, modifier) => {
+  const BE = `${block}__${element}`;
+  return modifier ? `${BE}--${modifier}` : BE;
+}
 
-// When the webpage loads, clear the value of emailInput and deactivate error
-// indicators.
-emailInput.value = "";
-emailInput.classList.remove(`${formBlock}__email-input--on-err`);
-errMsg.classList.remove(`${formBlock}__err-msg--on-err`);
+// BEM class parts
+const formBlock = "flex-signup-form";
+const inputElement = "email-input";
+const errMsgElement = "err-msg";
+const errModifier = "on-err";
+
+// DOM objects
+const form = document.getElementById("signup-form");
+const input = document.querySelector("." + BEM(formBlock, inputElement));
+const errMsg = document.querySelector("." + BEM(formBlock, errMsgElement));
+
+// Add error indicators
+const addErr = () => {
+  input.classList.add(BEM(formBlock, inputElement, errModifier));
+  errMsg.classList.add(BEM(formBlock, errMsgElement, errModifier));
+}
+
+// Remove error indicators
+const removeErr = () => {
+  input.classList.remove(BEM(formBlock, inputElement, errModifier));
+  errMsg.classList.remove(BEM(formBlock, errMsgElement, errModifier));
+}
+
+// When the webpage loads, clear the value of input and remove error indicators.
+window.addEventListener("load", (evt) => {
+  input.value = "";
+  removeErr();
+});
+
+// When input gets focus, remove error indicators.
+input.addEventListener("focus", (evt) => {
+  removeErr();
+})
 
 // Return true if email is valid and false otherwise.
 const isValidEmail = (email) => {
@@ -15,19 +44,16 @@ const isValidEmail = (email) => {
   return re.test(email);
 };
 
-// When the Submit button is clicked, checker whether or not emailInput
-// contained a valid email address. Activate or deactivate error
+// When the form is submitted, check whether or not input
+// contains a valid email address. Activate or deactivate error
 // indicators accordingly.
-submitBtn.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  email = emailInput.value;
+form.addEventListener("submit", (evt) => {
+  email = input.value;
   if (isValidEmail(email)) {
-    console.log(`${email} is a valid email address`);
-    emailInput.classList.remove(`${formBlock}__email-input--on-err`);
-    errMsg.classList.remove(`${formBlock}__err-msg--on-err`);
+    removeErr();
+    alert("Email address is valid")
   } else {
-    console.log(`${email} is not a valid email address`);
-    emailInput.classList.add(`${formBlock}__email-input--on-err`);
-    errMsg.classList.add(`${formBlock}__err-msg--on-err`);
+    addErr();
+    evt.preventDefault();
   }
 });
