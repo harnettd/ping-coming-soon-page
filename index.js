@@ -29,7 +29,7 @@ const removeErr = () => {
 
 // When the webpage loads, clear the value of input and remove error indicators.
 window.addEventListener("load", (evt) => {
-  input.value = "";
+  input.value = null;
   removeErr();
 });
 
