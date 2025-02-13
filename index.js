@@ -17,12 +17,14 @@ const errMsg = document.querySelector("." + BEM(formBlock, errMsgElement));
 
 // Add error indicators
 const addErr = () => {
+  form.classList.add(`${formBlock}--${errModifier}`)
   input.classList.add(BEM(formBlock, inputElement, errModifier));
   errMsg.classList.add(BEM(formBlock, errMsgElement, errModifier));
 }
 
 // Remove error indicators
 const removeErr = () => {
+  form.classList.remove(`${formBlock}--${errModifier}`)
   input.classList.remove(BEM(formBlock, inputElement, errModifier));
   errMsg.classList.remove(BEM(formBlock, errMsgElement, errModifier));
 }
