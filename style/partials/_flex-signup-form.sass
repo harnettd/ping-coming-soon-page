@@ -9,18 +9,19 @@
   flex-direction: column
   justify-content: flex-start
   align-items: center
-  gap: 1rem
+  gap: 1.6rem
 
   margin-bottom: 13.7rem
   width: 75%
 
   @media screen and (min-width: $breakpoint)
     flex-direction: row
-    // justify-content: space-between
+    justify-content: space-between
     align-items: flex-start
 
     margin-bottom: 8.5rem
-    max-width: 56rem
+    // max-width: 56rem
+    width: 100%
 
   &__email-container
     width: 100%
@@ -34,7 +35,7 @@
     //margin-bottom: 2.1rem
     border-radius: 4rem
     padding: 2.4rem 0 2.4rem 6.5rem
-    border: 0.2rem solid $pale-blue
+    border: 0.1rem solid $pale-blue
     width: 100%
 
     font-family: $font-stack
@@ -42,6 +43,10 @@
     font-weight: $light
     letter-spacing: 0.06rem
     color: $very-dark-blue
+
+    @media screen and (min-width: $breakpoint)
+      padding: 1.9rem 0 1.9rem 3rem
+      font-size: 1.6rem
 
     &--on-err
       border-color: $light-red
@@ -100,7 +105,7 @@
     @media screen and (min-width: $breakpoint)
       padding-top: 1.9rem
       padding-bottom: 1.9rem
-      // max-width: 20rem
+      max-width: 20rem
       font-size: 1.6rem
 
   &__submit-btn:hover

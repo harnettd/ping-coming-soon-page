@@ -8,16 +8,17 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 1.6rem;
   margin-bottom: 13.7rem;
   width: 75%;
 }
 @media screen and (min-width: 992px) {
   .flex-signup-form {
     flex-direction: row;
+    justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 8.5rem;
-    max-width: 56rem;
+    width: 100%;
   }
 }
 .flex-signup-form__email-container {
@@ -32,13 +33,19 @@
   display: block;
   border-radius: 4rem;
   padding: 2.4rem 0 2.4rem 6.5rem;
-  border: 0.2rem solid hsl(223, 100%, 88%);
+  border: 0.1rem solid hsl(223, 100%, 88%);
   width: 100%;
   font-family: "Libre Franklin", sans-serif;
   font-size: 2.3rem;
   font-weight: 300;
   letter-spacing: 0.06rem;
   color: hsl(209, 33%, 12%);
+}
+@media screen and (min-width: 992px) {
+  .flex-signup-form__email-input {
+    padding: 1.9rem 0 1.9rem 3rem;
+    font-size: 1.6rem;
+  }
 }
 .flex-signup-form__email-input--on-err {
   border-color: hsl(354, 100%, 66%);
@@ -101,6 +108,7 @@
   .flex-signup-form__submit-btn {
     padding-top: 1.9rem;
     padding-bottom: 1.9rem;
+    max-width: 20rem;
     font-size: 1.6rem;
   }
 }
