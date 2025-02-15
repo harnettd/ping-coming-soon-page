@@ -20,8 +20,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 8.5rem;
-    width: 100%;
+    gap: 1.6rem;
+    margin-bottom: 1.5rem;
+    width: 85%;
   }
 }
 .flex-signup-form__email-container {
@@ -46,8 +47,8 @@
 }
 @media screen and (min-width: 992px) {
   .flex-signup-form__email-input {
-    padding: 1.9rem 0 1.9rem 3rem;
-    font-size: 1.6rem;
+    padding: 1.9rem 0 1.9rem 2.9rem;
+    font-size: 1.4rem;
   }
 }
 .flex-signup-form__email-input--on-err {
@@ -180,6 +181,11 @@ body {
   margin: 16.8rem 0 2rem;
   background-color: hsl(0, 0%, 100%);
 }
+@media screen and (min-width: 992px) {
+  body {
+    margin-top: 8.6rem;
+  }
+}
 
 h1,
 p {
@@ -205,6 +211,7 @@ p {
 @media screen and (min-width: 992px) {
   .logo-img {
     margin-bottom: 4.8rem;
+    margin-left: -0.3rem;
     width: 8.6rem;
   }
 }
