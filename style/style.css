@@ -75,6 +75,12 @@
     display: block;
     text-align: left;
     visibility: hidden;
+    margin-top: 0.8rem;
+    margin-bottom: 5rem;
+    padding-left: 3rem;
+    max-width: 42.2rem;
+    font-size: 1.2rem;
+    letter-spacing: 0;
   }
 }
 .flex-signup-form__err-msg--on-err {
@@ -83,17 +89,6 @@
 @media screen and (min-width: 992px) {
   .flex-signup-form__err-msg--on-err {
     visibility: visible;
-  }
-}
-@media screen and (min-width: 992px) {
-  .flex-signup-form__err-msg {
-    margin-bottom: 0;
-    padding-top: 1.8rem;
-    padding-bottom: 1.8rem;
-    padding-left: 3.2rem;
-    max-width: 42.2rem;
-    font-size: 1.6rem;
-    letter-spacing: 0;
   }
 }
 .flex-signup-form__submit-btn {
@@ -282,7 +277,7 @@ body {
 }
 @media screen and (min-width: 992px) {
   body {
-    background-image: url("../design/desktop-design.jpg");
+    background-image: url("../design/desktop-hover-error-states.jpg");
     background-size: 144rem auto;
   }
 }
