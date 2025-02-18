@@ -15,11 +15,8 @@
 // Base
 
 body
-  margin: 16.8rem 0 2rem
+  margin: 0
   background-color: $white
-
-  @media screen and (min-width: $breakpoint) 
-    margin-top: 8.6rem
 
 h1,
 p
@@ -34,9 +31,12 @@ p
   justify-content: flex-start
   align-items: center
 
-  margin: 0 auto
+  margin: 16.8rem auto 2rem
   min-width: 57.6rem
   max-width: 75rem
+
+  @media screen and (min-width: $breakpoint) 
+    margin-top: 8.6rem
 
 
 // Blocks
@@ -63,6 +63,7 @@ p
 
   @media screen and (min-width: $breakpoint)
     margin-bottom: 1.7rem
+
     font-size: 4.73rem
     letter-spacing: 0.05rem
 
@@ -72,6 +73,7 @@ p
 
 .copy
   margin-bottom: 6.5rem
+
   text-align: center
   font-size: 2.41rem
   font-weight: $light
@@ -79,6 +81,7 @@ p
 
   @media screen and (min-width: $breakpoint)
     margin-bottom: 3.8rem
+  
     font-size: 2rem
 
 .illustration-img
@@ -110,16 +113,16 @@ p
 
 body
   background:
-    image: url("../design/mobile-error-state.jpg")
+    // image: url("../design/mobile-error-state.jpg")
     repeat: no-repeat
     position: left top 
     size: 75rem auto
 
   @media screen and (min-width: $breakpoint)
     background:
-      image: url("../design/desktop-hover-error-states.jpg")
+      // image: url("../design/desktop-hover-error-states.jpg")
       size: 144rem auto
 
 #main,
 #footer
-  opacity: 0.5
+  // opacity: 0.5

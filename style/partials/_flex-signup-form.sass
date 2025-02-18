@@ -1,7 +1,7 @@
 @use 'vars' as *
 
 %btn-active
-    background-color: $blue-hover
+    opacity: 0.8
     cursor: pointer
 
 .flex-signup-form
@@ -14,9 +14,6 @@
   margin-bottom: 13.8rem
   width: 75%
 
-  &--on-err
-    margin-bottom: 7.4rem
-
   @media screen and (min-width: $breakpoint)
     flex-direction: row
     justify-content: space-between
@@ -26,6 +23,9 @@
     margin-bottom: 1.5rem
     width: 85%
 
+  &--on-err
+    margin-bottom: 7.4rem
+  
   &__email-container
     width: 100%
 
@@ -35,7 +35,6 @@
   &__email-input
     display: block
 
-    //margin-bottom: 2.1rem
     border-radius: 4rem
     padding: 2.3rem 0 2.4rem 6.5rem
     border: 0.2rem solid $pale-blue
@@ -47,6 +46,8 @@
     letter-spacing: 0.1rem
     color: $very-dark-blue
 
+    opacity: 0.5
+
     @media screen and (min-width: $breakpoint)
       padding: 1.9rem 0 1.9rem 2.9rem
       font-size: 1.4rem
@@ -54,11 +55,10 @@
     &--on-err
       border-color: $light-red
 
-    &::placeholder
-      color: $gray
+      opacity: 1
 
     &:focus-visible
-        border-color: $blue  
+        opacity: 1
 
   &__err-msg
     display: none
@@ -79,10 +79,9 @@
 
       margin-top: 0.8rem
       margin-bottom: 5rem
-      // padding-top: 1.8rem
-      // padding-bottom: 1.8rem
       padding-left: 3rem
       max-width: 42.2rem
+
       font-size: 1.2rem
       letter-spacing: 0
 
@@ -93,11 +92,11 @@
         visibility: visible
 
   &__submit-btn
+    border: none
+    border-radius: 4rem
     padding-top: 2.5rem
     padding-bottom: 2.6rem
     width: 100%
-    border: none
-    border-radius: 4rem
 
     font-family: $font-stack
     font-size: 2.4rem
@@ -109,6 +108,7 @@
       padding-top: 1.9rem
       padding-bottom: 1.9rem
       max-width: 20rem
+      
       font-size: 1.6rem
 
   &__submit-btn:hover

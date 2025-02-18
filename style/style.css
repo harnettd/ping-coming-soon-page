@@ -1,5 +1,5 @@
 .flex-signup-form__submit-btn:focus-visible, .flex-signup-form__submit-btn:hover {
-  background-color: hsla(223, 87%, 63%, 0.8);
+  opacity: 0.8;
   cursor: pointer;
 }
 
@@ -12,9 +12,6 @@
   margin-bottom: 13.8rem;
   width: 75%;
 }
-.flex-signup-form--on-err {
-  margin-bottom: 7.4rem;
-}
 @media screen and (min-width: 992px) {
   .flex-signup-form {
     flex-direction: row;
@@ -24,6 +21,9 @@
     margin-bottom: 1.5rem;
     width: 85%;
   }
+}
+.flex-signup-form--on-err {
+  margin-bottom: 7.4rem;
 }
 .flex-signup-form__email-container {
   width: 100%;
@@ -44,6 +44,7 @@
   font-weight: 300;
   letter-spacing: 0.1rem;
   color: hsl(209, 33%, 12%);
+  opacity: 0.5;
 }
 @media screen and (min-width: 992px) {
   .flex-signup-form__email-input {
@@ -53,12 +54,10 @@
 }
 .flex-signup-form__email-input--on-err {
   border-color: hsl(354, 100%, 66%);
-}
-.flex-signup-form__email-input::placeholder {
-  color: hsl(0, 0%, 59%);
+  opacity: 1;
 }
 .flex-signup-form__email-input:focus-visible {
-  border-color: hsl(223, 87%, 63%);
+  opacity: 1;
 }
 .flex-signup-form__err-msg {
   display: none;
@@ -92,11 +91,11 @@
   }
 }
 .flex-signup-form__submit-btn {
+  border: none;
+  border-radius: 4rem;
   padding-top: 2.5rem;
   padding-bottom: 2.6rem;
   width: 100%;
-  border: none;
-  border-radius: 4rem;
   font-family: "Libre Franklin", sans-serif;
   font-size: 2.4rem;
   font-weight: 600;
@@ -134,10 +133,10 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  width: 6rem;
-  height: 6rem;
   border: 0.1rem solid hsl(223, 100%, 88%);
   border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
 }
 @media screen and (min-width: 992px) {
   .flex-socials-list__icon-wrapper {
@@ -173,13 +172,8 @@
 }
 
 body {
-  margin: 16.8rem 0 2rem;
+  margin: 0;
   background-color: hsl(0, 0%, 100%);
-}
-@media screen and (min-width: 992px) {
-  body {
-    margin-top: 8.6rem;
-  }
 }
 
 h1,
@@ -192,9 +186,14 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 auto;
+  margin: 16.8rem auto 2rem;
   min-width: 57.6rem;
   max-width: 75rem;
+}
+@media screen and (min-width: 992px) {
+  #main {
+    margin-top: 8.6rem;
+  }
 }
 
 .logo-img {
@@ -270,21 +269,14 @@ p {
 }
 
 body {
-  background-image: url("../design/mobile-error-state.jpg");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 75rem auto;
 }
 @media screen and (min-width: 992px) {
   body {
-    background-image: url("../design/desktop-hover-error-states.jpg");
     background-size: 144rem auto;
   }
-}
-
-#main,
-#footer {
-  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
