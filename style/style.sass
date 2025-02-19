@@ -25,15 +25,20 @@ p
 
 // Layout
 
-#main
+#main, #footer
   display: flex
   flex-direction: column
   justify-content: flex-start
   align-items: center
 
-  margin: 16.8rem auto 2rem
+  margin-left: auto
+  margin-right: auto
   min-width: 57.6rem
   max-width: 75rem
+
+#main
+  margin-top: 16.8rem
+  margin-bottom: 2rem
 
   @media screen and (min-width: $breakpoint) 
     margin-top: 8.6rem
@@ -102,27 +107,28 @@ p
   @media screen and (min-width: $breakpoint)
     font-size: 1.2rem
 
-// .attribution
-//   font-size: 1.1rem
-//   text-align: center
+.attribution
+  font-size: 1.1rem
+  text-align: center
 
-// .attribution a
-//   color: hsl(228 45% 44%)
+.attribution a
+  color: hsl(228deg 45% 44%)
 
+  
 // Development redefinition level
 
 body
   background:
-    image: url("../design/mobile-error-state.jpg")
+    // image: url("../design/mobile-error-state.jpg")
     repeat: no-repeat
     position: left top 
     size: 75rem auto
 
   @media screen and (min-width: $breakpoint)
     background:
-      image: url("../design/desktop-hover-error-states.jpg")
+      // image: url("../design/desktop-hover-error-states.jpg")
       size: 144rem auto
 
-#main,
-#footer
-  opacity: 0.5
+// #main,
+// #footer
+//   opacity: 0.5

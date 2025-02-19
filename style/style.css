@@ -186,14 +186,20 @@ p {
   font-family: "Libre Franklin", sans-serif;
 }
 
-#main {
+#main, #footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 16.8rem auto 2rem;
+  margin-left: auto;
+  margin-right: auto;
   min-width: 57.6rem;
   max-width: 75rem;
+}
+
+#main {
+  margin-top: 16.8rem;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 992px) {
   #main {
@@ -273,22 +279,24 @@ p {
   }
 }
 
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 body {
-  background-image: url("../design/mobile-error-state.jpg");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 75rem auto;
 }
 @media screen and (min-width: 992px) {
   body {
-    background-image: url("../design/desktop-hover-error-states.jpg");
     background-size: 144rem auto;
   }
-}
-
-#main,
-#footer {
-  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
