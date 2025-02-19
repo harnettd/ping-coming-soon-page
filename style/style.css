@@ -18,12 +18,17 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 1.6rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
     width: 85%;
   }
 }
 .flex-signup-form--on-err {
-  margin-bottom: 7.4rem;
+  margin-bottom: 7.2rem;
+}
+@media screen and (min-width: 992px) {
+  .flex-signup-form--on-err {
+    margin-bottom: 1.3rem;
+  }
 }
 .flex-signup-form__email-container {
   width: 100%;
@@ -246,13 +251,13 @@ p {
 
 .illustration-img {
   display: block;
-  margin-bottom: 24.1rem;
+  margin-bottom: 22.1rem;
   width: 85%;
   height: auto;
 }
 @media screen and (min-width: 992px) {
   .illustration-img {
-    margin-bottom: 7.2rem;
+    margin-bottom: 5.2rem;
   }
 }
 
@@ -269,14 +274,21 @@ p {
 }
 
 body {
+  background-image: url("../design/mobile-error-state.jpg");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 75rem auto;
 }
 @media screen and (min-width: 992px) {
   body {
+    background-image: url("../design/desktop-hover-error-states.jpg");
     background-size: 144rem auto;
   }
+}
+
+#main,
+#footer {
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
