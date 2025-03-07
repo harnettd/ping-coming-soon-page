@@ -32,7 +32,7 @@ const removeErr = () => {
 
 // When the webpage loads, clear the value of input and remove error indicators.
 window.addEventListener("load", (evt) => {
-  input.value = null;
+  input.value = "";
   removeErr();
 });
 
@@ -51,7 +51,8 @@ const isValidEmail = (email) => {
 // contains a valid email address. Activate or deactivate error
 // indicators accordingly.
 form.addEventListener("submit", (evt) => {
-  email = input.value;
+  evt.preventDefault();
+  const email = input.value;
   if (isValidEmail(email)) {
     removeErr();
     alert("Email address is valid");
@@ -61,6 +62,5 @@ form.addEventListener("submit", (evt) => {
     } else {
       addErr("Please provide a valid email address");
     }
-    evt.preventDefault();
   }
 });
